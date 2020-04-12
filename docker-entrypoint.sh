@@ -5,12 +5,19 @@ launch() {
     PSK=`hexdump -n 16 -e '4/4 "%08x" 1 "\n"' /dev/urandom`
   fi
 
+if [ -z "$OBFS" ]; then
   cat > snell.conf <<EOF
-[snell-server]
-listen = ${SERVER_HOST}:${SERVER_PORT}
-psk = ${PSK}
-obfs = ${OBFS}
-EOF
+  [snell-server]
+  listen = ${SERVER_HOST}:${SERVER_PORT}
+  psk = ${PSK}
+  EOF
+else
+  cat > snell.conf <<EOF
+  [snell-server]
+  listen = ${SERVER_HOST}:${SERVER_PORT}
+  psk = ${PSK}
+  obfs = ${OBFS}
+  EOF
 
   cat snell.conf
   snell-server \
