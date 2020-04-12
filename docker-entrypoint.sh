@@ -18,6 +18,7 @@ else
   psk = ${PSK}
   obfs = ${OBFS}
   EOF
+fi
 
   cat snell.conf
   snell-server \
