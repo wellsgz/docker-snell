@@ -19,19 +19,17 @@
 
 |version|
 |---|
-|deercloud/snell:latest|
-|deercloud/snell:current|
-|deercloud/snell:1.1.1|
+|wellsgz/docker-snell:latest|
 
 
 ## environment variables
 
 |name|value|
 |---|---|
-|SERVER_HOST|0.0.0.0|
-|SERVER_PORT|8388|
-|**PSK**|[RANDOM]|
-|**OBFS**|http|
+|SERVER_HOST|[IP ADDRESS]|
+|SERVER_PORT|[PORT NUMBER]|
+|**PSK**|[RANDOM|PSK]|
+|**OBFS**|http|tls|EMPTY|
 |ARGS|-|
 
 ***
@@ -39,14 +37,14 @@
 ### Pull the image
 
 ```bash
-$ docker pull deercloud/snell
+$ docker pull wellsgz/docker-snell
 ```
 
 ### Start a container
 
 ```bash
-$ docker run -p 8388:8388 -p 8388:8388/udp -d \
-  --restart always --name=snell deercloud/snell
+$ docker run -p 8388:8388 -d \
+  --restart always --name=snell wellsgz/docker-snell
 ```
 
 ### Display config
