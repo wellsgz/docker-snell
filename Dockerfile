@@ -1,6 +1,6 @@
 FROM alpine:edge as builder
 
-LABEL maintainer="metowolf <i@i-meto.com>"
+LABEL maintainer="wells <wellsgz@wellsgz.io>"
 
 ENV SNELL_VERSION 2.0.0
 
