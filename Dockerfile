@@ -18,7 +18,7 @@ FROM alpine:3.9
 
 LABEL maintainer="wells <wellsgz@wellsgz.io>"
 
-ENV GLIBC_VERSION 2.29-r0
+ENV GLIBC_VERSION 2.31-r0
 
 ENV SERVER_HOST 0.0.0.0
 ENV SERVER_PORT=
