@@ -2,7 +2,7 @@ FROM alpine:edge as builder
 
 LABEL maintainer="wells <wellsgz@wellsgz.io>"
 
-ENV SNELL_VERSION 2.0.0
+ENV SNELL_VERSION 2.0.1
 
 RUN apk update \
   && apk add --no-cache \
